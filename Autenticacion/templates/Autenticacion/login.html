@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main>
+
+        <section class="flex-container">
+                <div class="flex-item">
+                        <h1>Log in</h1>
+                </div>
+                <form method="post" action="" class="form">{% csrf_token %}
+                        <div class="form_section">
+                                <input type="text" name="username" id="username" placeholder="Username" class="form-input">
+                        </div>
+
+                        <div class="form_section">
+                                <input type="password" name="password" id="password" placeholder="Password" class="form-input">
+                        </div>
+
+                        <div class="form_section">
+                                <button type="submit" class="form_button"> Login</button>
+                        </div>
+                </form>
+
+                <div class="flex-footer">
+                        <a href="{% url 'Signup' %}" class="footer-cta">Registrate</a>
+                </div>
+        </section>
+
+</main>
+{% endblock %}

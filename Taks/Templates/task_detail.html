@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="flex-container">
+
+    <div class="flex-item">
+        <h1>Edita tu Nota</h1 class="flex-Nota_tittle">
+        <h2>{{info.Title}}</h2>
+    </div>
+
+    <div class="div-buttons">
+        <form method="post" class="form-task"> {% csrf_token %}
+            {{form.as_div}}
+            <div class="form_section">
+                <button type="submit" class="form_button form_button-actualizacion">Actualizar</button>
+            </div>
+
+
+        </form>
+
+        <form method="post" action="{% url 'complete_task' info.id %}" class="form-task"> {% csrf_token %}
+            <button class="form_button form_button--cambio1"> Completar </button>
+        </form>
+
+        <form action="{% url 'deletetask' info.id %}" method="post"  class="form-task form-task--2">{% csrf_token %}
+
+            <button class="form_button form_button--cambio2">Eliminar</button>
+
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="flex-container">
+    <div class="menu">
+        <h1>Crea tu Nota</h1>
+    </div>
+
+    <form method="post" class="form-task">{% csrf_token %}
+        {{form.as_div}}
+        <div class="form_buttom">
+
+            <button type="submit" class="form_button">Create Task</button>
+        </div>
+    </form>
+</section>
+{%endblock%}

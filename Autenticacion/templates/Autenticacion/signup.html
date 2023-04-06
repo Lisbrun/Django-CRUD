@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<section class="flex-container">
+    <div class="flex-item">
+        <h1>Signup</h1>
+    </div>
+
+    <form action="#" method="post" class="form-signup"> {% csrf_token %}
+        {{form.as_div}}
+
+        <div class="form_buttom">
+
+            <button type="submit" class="form_button"> Login</button>
+        </div>
+    </form>
+
+    <div class="flex-footer">
+        <a href="{% url 'login' %}" class="footer-cta">Iniciar Sesion</a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg_color: #1e1c2a;
+    --main_color:#ff702a;
+    --text_color:#fff;
+}
+
+body {
+    background-color: var(--bg_color);
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 130px;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--bg_color);
+}
+.navbar {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main_color);
+}
+.navbar li a {
+    color: var(--text_color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.navbar li a:hover {
+    color: var(--main_color);
+    transition: color .5s;
+}
+.Tareas{
+    margin: 30px 130px;
+}
+.menu{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.menu h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color:var(--main_color)
+}
+.tasks{
+    
+    color: white;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows:200px;
+}
+.tasks-container{
+    background-color: #feeee7;
+    border-radius: 20px;
+    position: relative;
+    align-items: center;
+}
+
+.task-texts{
+    
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+.task-texts img{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+}
+
+.task-texts a{
+    color: var(--main_color);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.task-texts p{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--bg_color)  ;
+}
+.task-texts h3{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 40px;
+    color: var(--bg_color)  ;
+}
+
+#completadas{
+    font-size: 2em;
+    color:var(--main_color);
+    font-weight: 600;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #feeee7;
+    width: 30%;
+    max-width: auto;
+    height: auto;
+}
+
+.form{
+    min-width: 300px;
+    flex-grow: 1;
+    text-align: center;
+    padding: 30px;
+}
+.form_section{
+    margin-bottom: 25px;
+}
+.form-input{
+    width: 100%;
+    padding: 6px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 2px solid var(--main_color);
+    background-color: transparent;
+    color: #000;
+
+}
+
+.form_button{
+    margin-top:25px ;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background-color: #2ECC71;
+    color:#fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.flex-item{
+    text-align: center;
+    color: var(--main_color);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.form_button::hover{
+    background-color: #27AE60 ;
+
+}
+.form_button:active{
+    background-color: #27AE60 ;
+}
+
+.flex-footer{
+    text-align: center;
+}
+.footer-cta{
+    text-decoration: none;
+    color: var(--main_color);
+    font-weight: 400;
+}
+.footer-cta:hover{
+    text-decoration: underline;
+}
+
+.form-input::placeholder{
+    color:var(--bg_color);
+    opacity: .8;
+}
+.form-input:focus::placeholder{
+    opacity: .3;
+}
+.form-signup{
+    min-width: 300px;
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.form-signup div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.form-signup div label {
+    font-size: 1.2em;
+    font-weight: 500;
+    order: 0;
+}
+.form-signup div input{
+    order: 1;
+    width: 100%;
+    padding: 6px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 2px solid var(--main_color);
+    background-color: transparent;
+    color: #000;
+}
+
+.form-signup div input:focus{
+    outline: none;
+    border:none;
+}
+.form-signup div div{
+    order: 3;
+}
+.helptext ul li {
+    display: none;
+    margin-bottom: 8px;
+}
+
+
+
+.form-task div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+}
+.form-task{
+    width: 100%;
+}
+.form_button--cambio2{
+    margin-top: 35px;
+    background-color: #E74C3C;
+}
+.form_button--cambio2:active{
+    background-color: #CB4335;
+}
+.form_button-actualizacion{
+    background-color: #3498DB;
+}
+.form_button-actualizacion:active{
+    background-color: #2980B9;
+}
+
+.form-task div label {
+    font-size: 1.2em;
+    font-weight: 500;
+    order: 0;
+}
+
+.form-task div input{
+    order: 1;
+    width: 100%;
+    padding: 6px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid var(--main_color);
+    background-color: transparent;
+    color: #000;
+}
+.form-task div input:focus {
+    outline: none;
+}
+
+.form-task div textarea{
+    resize: none;
+    overflow: auto;
+    background-color: transparent;
+    border: 3px solid var(--main_color);
+    border-radius: 20px;
+}
+.form-task div textarea:focus{
+    outline: none;
+}
+
+#id_important{  
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+#id_Title{
+    font-size: 1rem;
+}
+#id_Description{
+    font-size: 1rem;
+}
+.div-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    width: 100%;
+    height: auto;
+}
+.flex-Nota_tittle{
+    margin-bottom: 10px;
+}

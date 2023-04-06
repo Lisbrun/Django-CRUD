@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    {% if "valido" in request.GET %}
+        <p> informacion enviada correctamente</p>
+    {% endif %}
+<form action="" method="POST ">{%csrf_token %}
+    {{form.as_p}}
+    <button type="submit" > Enviar</button>
+</form>
+</div>
+{% endblock%}

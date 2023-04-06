@@ -1,0 +1,25 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<section class="Tareas">
+    <div class="menu">
+        <h1>Notas Completadas</h1>
+    </div>
+
+    <div class="tasks">
+        {% for task in task %}
+        <div class="tasks-container">
+            <div class="task-texts">
+                <h1 id="completadas">{{task.Title}}</h1>
+                <p>{{task.Description}}</p>
+                <img src="{% static 'img/Icono2.png' %}" alt="" id="img-completed">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

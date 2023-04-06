@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="Tareas">
+        <div class="menu">
+                <h1>Encuentra todas tus Notas</h1>
+        </div>
+        <div class="tasks">
+                {% for info in info %}
+                <div class="tasks-container">
+                        <div class="task-texts">
+
+                                {% if info.important %}
+                                <a href="{% url 'Task_detail' info.id %}">{{info.Title}} </a>
+                                {% else %}
+                                <h2> <a href="{% url 'Task_detail' info.id %}">{{info.Title}}</a></h2>
+                                {% endif %}
+                                <p>{{info.Description}}</p>
+                                <h3>{{info.User.username}}</h3>
+                                <img src="{% static 'img/Icono1.png' %}" alt="">
+                        </div>
+                </div>
+                {% endfor %}
+        </div>
+</section>
+{% endblock %}
